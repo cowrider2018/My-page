@@ -105,8 +105,8 @@ body.day-mode {
 }
 
 .top-face {
-    position: absolute;
-    right: 200px;
+    position: relative;
+    right: -30%;
     border-radius: 50%;
     transform: translateY(50%);
     width: 200px;
@@ -114,13 +114,12 @@ body.day-mode {
     transition: 0.3s;
     z-index:1;
     box-shadow: 0 0 8px white;
+    transition: 0.3s;
 }
 
 .top-face:hover {
-    right: 180px;
     width: 240px;
     height: 240px;
-    transition: 0.3s;
 }
 
 .portfolio{
@@ -357,67 +356,35 @@ body.day-mode {
     left: 15px;
 }
 
-/* RWD */
 @media (max-width: 1200px) {
-    .portfolio-box, .portfolio-box-default {
-        width: 48%;
-        height: 200px;
+    .top-face {
+        width: 160px;
+        height: 160px;
     }
-    .navbar-title {
-        font-size: 20px;
+    .top-face:hover {
+        width: 192px;
+        height: 192px;
     }
 }
 
 @media (max-width: 768px) {
-    .portfolio-box, .portfolio-box-default {
-        width: 98%;
-        height: 200px;
+    .top-face {
+        width: 120px;
+        height: 120px;
     }
-    .navbar-title {
-        font-size: 18px;
-    }
-    .navbar-links {
-        flex-direction: column;
-    }
-    .navbar-links li {
-        padding: 10px;
-    }
-}
-
-/* RWD */
-@media (max-width: 768px) {
-    .portfolio-box, .portfolio-box-default {
-        width: 48%;
-        height: 200px;
-    }
-    .navbar-title {
-        font-size: 20px;
+    .top-face:hover {
+        width: 144px;
+        height: 144px;
     }
 }
 
 @media (max-width: 480px) {
-    .portfolio-box, .portfolio-box-default {
-        width: 98%;
-        height: 150px;
-    }
-    .navbar-title {
-        font-size: 16px;
-    }
-    .navbar-links {
-        flex-direction: column;
-    }
-    .navbar-links li {
-        padding: 8px;
-    }
-    .navbar-links a {
-        font-size: 14px;
-    }
     .top-face {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
     .top-face:hover {
-        width: 180px;
-        height: 180px;
+        width: 120px;
+        height: 120px;
     }
 }
