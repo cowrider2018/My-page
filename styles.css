@@ -1,0 +1,358 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-shadow: 0 0 8px white;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraft', sans-serif;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    transition: background-color 0.75s;
+    overflow-x: hidden;
+}
+
+body.day-mode {
+    background-color: #f0f0f0;
+    color: black;
+    text-shadow: none;
+    .top{
+        background-image: url(img/day.jpg);
+    }
+    .portfolio-txt{
+        color: inherit;
+    }
+    .portfolio-img{
+        box-shadow: 0 0 8px black;
+    }
+    .top-face {
+        box-shadow: 0 0 8px black;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-title {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.navbar-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-title:hover {
+    color: #ffd54f;
+    font-size: 28px;
+    padding: 6px;
+    transition: 0.3s;
+}
+
+.navbar-links {
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    padding: 14px;
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-links a:hover {
+    color: #ffd54f;
+    font-size: 24px;
+    li{
+        padding: 10px;
+        background-color: #8b8b8b;
+    }
+    transition: 0.3s;
+}
+
+.top {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background-image: url(img/night.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.top-face {
+    position: absolute;
+    right: 200px;
+    border-radius: 50%;
+    transform: translateY(50%);
+    width: 200px;
+    height: 200px;
+    transition: 0.3s;
+    z-index:1;
+    box-shadow: 0 0 8px white;
+}
+
+.top-face:hover {
+    right: 180px;
+    width: 240px;
+    height: 240px;
+    transition: 0.3s;
+}
+
+.portfolio{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: 0s;
+    position: absolute;
+}
+
+.portfolio-box{
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 32%;
+    height: 36%;
+    position: absolute;
+    left: -100%;
+    overflow: hidden;
+    box-shadow: 0 0 8px white;
+    img,iframe{
+        width: 100%;
+        height: 100%;
+    }
+    transition: 0.6s;
+}
+.portfolio-box-default{
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 15px;
+    width: 32%;
+    height: 36%;
+    position: absolute;
+    left: 0%;
+    overflow: hidden;
+    box-shadow: 0 0 8px white;
+    img,iframe{
+        width: 100%;
+        height: 100%;
+    }
+    transition: 0.3s;
+}
+
+.portfolio-txt {
+    font-weight: lighter;
+    position: absolute;
+    left: 40%;
+    color: white;
+    h5{
+        color: inherit;
+        width: fit-content;
+        font-weight: lighter;
+        margin-bottom: 30px;
+        font-size: 30px;
+        transition: 0.3s;
+    }
+    h5:hover{
+        font-size: 36px;
+        color: #ffd54f;
+        cursor: pointer;
+    }
+    .txt{
+        color: inherit;
+        text-decoration: none;
+        width: fit-content;
+        position: relative;
+        padding: 5px;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+    .txt:hover{
+        text-decoration: none;
+        font-size: 18px;
+        color: #ffd54f;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.switch{
+    padding: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+}
+
+.switch-bar {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    background: linear-gradient(to right, #bbdefb 0%, #0d47a1 50%, #1a237e 100%);
+    transition: 0.3s;
+}
+
+.switch-bar:hover {
+    width: 180px;
+    height: 60px;
+}
+
+.switch-bar.active {
+    background: linear-gradient(to right, #bbdefb 0%, #ffd54f 50%, #ffeb3b 100%);
+}
+
+.switch-bar.active .day-gradient {
+    opacity: 1;
+}
+
+.switch-bar.active .night-gradient {
+    opacity: 0;
+}
+
+.cloud {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background: #e1f5fe;
+    border-radius: 20px 20px 0 0;
+    transition: left 0.3s;
+}
+
+.cloud1 {
+    top: 40px;
+    left: 40px;
+}
+
+.cloud2 {
+    top: 30px;
+    left: 15px;
+}
+
+.cloud3 {
+    top: 25px;
+    left: -10px;
+}
+
+.switch-bar.active .cloud1 {
+    left: 90px;
+}
+
+.switch-bar.active .cloud2 {
+    left: 115px;
+}
+
+.switch-bar.active .cloud3 {
+    left: 140px;
+}
+
+.toggle {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: #bbdefb;
+    border-radius: 50%;
+    transition: left 0.3s, background 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px #2e73ab;
+}
+
+.switch-bar.active .toggle {
+    left: 75%;
+    background: #ffeb3b;
+    box-shadow: 0 0 8px white;
+}
+
+.moon, .sun {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.moon {
+    background: #bbdefb;
+}
+
+.sun {
+    background: #ffeb3b;
+    display: none;
+}
+
+.sun-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.switch-bar.active .sun {
+    display: block;
+}
+
+.switch-bar.active .moon {
+    display: none;
+}
+
+.crater {
+    position: absolute;
+    background: #e1f5fe;
+    border-radius: 50%;
+}
+
+.crater1 {
+    width: 11px;
+    height: 11px;
+    top: 5px;
+    left: 13px;
+}
+
+.crater2 {
+    width: 6px;
+    height: 6px;
+    top: 15px;
+    left: 7px;
+}
+
+.crater3 {
+    width: 8px;
+    height: 8px;
+    top: 18px;
+    left: 15px;
+}
