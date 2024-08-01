@@ -224,6 +224,10 @@ body.day-mode {
     height: 60px;
 }
 
+.switch-txt {
+    padding-top: 5px;
+}
+
 .switch-bar.active {
     background: linear-gradient(to right, #bbdefb 0%, #ffd54f 50%, #ffeb3b 100%);
 }

@@ -1,15 +1,15 @@
 document.getElementById('switch-bar').addEventListener('click', function() {
     this.classList.toggle('active');
     document.getElementById('body').classList.toggle('day-mode');
-    const txt = document.getElementById('switch-txt');
+    const txt = document.getElementsByClassName('switch-txt');
     if (this.classList.contains('active')) {
         const audio = new Audio("audio/day.mp3");
         audio.play();
-        txt.textContent = 'DAY MODE';
+        txt[0].textContent = 'DAY MODE';
     } else {
         const audio = new Audio("audio/night.mp3");
         audio.play();
-        txt.textContent = 'NIGHT MODE';
+        txt[0].textContent = 'NIGHT MODE';
     }
 });
 
