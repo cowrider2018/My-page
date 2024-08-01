@@ -388,10 +388,10 @@ body.day-mode {
         width: 48%;
         font-size: 15px;
         left: 60%;
-    }
-
-    .portfolio-title h5{
-        font-size: 15px;
+        h5{
+            margin-top: 75px;
+            margin-bottom: 10px;
+        }
     }
 }
 
