@@ -95,6 +95,7 @@ body.day-mode {
 }
 
 .top {
+    transition: 0.3s;
     position: absolute;
     height: 50%;
     width: 100%;
@@ -124,7 +125,7 @@ body.day-mode {
 }
 
 .portfolio{
-    margin-top: 50vh;
+    top: 50%;
     display: flex;
     width: 100%;
     height: 100%;
@@ -368,9 +369,22 @@ body.day-mode {
         width: 192px;
         height: 192px;
     }
+
+    .portfolio-box, .portfolio-box-default {
+        width: 40%;
+        height: 200px;
+    }
+
+    .portfolio-txt{
+        font-size: 15px;
+        left: 50%;
+    }
 }
 
 @media (max-width: 768px) {
+    .top {
+        height: 30%;
+    }
     .top-face {
         width: 120px;
         height: 120px;
@@ -380,19 +394,18 @@ body.day-mode {
         height: 144px;
     }
 
+    .portfolio{
+        top: 40%;
+    }
+
     .portfolio-box, .portfolio-box-default {
-        width: 48%;
+        width: 50%;
         height: 200px;
     }
 
     .portfolio-txt{
-        width: 48%;
         font-size: 15px;
         left: 60%;
-        h5{
-            margin-top: 75px;
-            margin-bottom: 10px;
-        }
     }
 }
 
