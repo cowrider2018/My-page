@@ -135,7 +135,7 @@ body.day-mode {
 }
 
 .portfolio-box{
-    margin-left: 30px;
+    margin-left: 4%;
     margin-top: 30px;
     border-radius: 15px;
     width: 32%;
@@ -151,7 +151,7 @@ body.day-mode {
     transition: 0.6s;
 }
 .portfolio-box-default{
-    margin-left: 30px;
+    margin-left: 4%;
     margin-top: 30px;
     border-radius: 15px;
     width: 32%;
@@ -405,23 +405,22 @@ body.day-mode {
 
     .portfolio-txt{
         font-size: 15px;
-        left: 60%;
+        left: 65%;
     }
 }
 
 @media (max-width: 480px) {
     .top-face {
-        width: 100px;
-        height: 100px;
+        left: 0%;
     }
-    .top-face:hover {
-        width: 120px;
-        height: 120px;
+    .portfolio-box {
+        width: 80%;
+        margin-left: 10%;
     }
 
-    .portfolio-box, .portfolio-box-default {
-        width: 98%;
-        height: 150px;
+    .portfolio-txt {
+        top: 30%;
+        left: 10%;
     }
 
     .navbar-title {
