@@ -100,7 +100,10 @@ body.day-mode {
     height: 50%;
     width: 100%;
     background-image: url(img/night.jpg);
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position-x: 0%;
+    background-position-y: 0%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
