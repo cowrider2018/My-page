@@ -1,3 +1,20 @@
+window.addEventListener('load', function() {
+    var move = document.querySelector('.top');
+    move.style.height = '50%';
+    this.setTimeout(() => {
+        move = document.querySelector('.top-face');
+        move.style.width = '200px';
+        move.style.height = '200px';
+    }, 300);
+    move = document.querySelector('.navbar');
+    move.style.top = '0';
+    move = document.querySelector('.navbar-title');
+    move.style.opacity = '1';
+    move = document.querySelector('.navbar-links');
+    move.style.opacity = '1';
+});
+
+
 document.getElementById('switch-bar').addEventListener('click', function() {
     this.classList.toggle('active');
     document.getElementById('body').classList.toggle('night-mode');
