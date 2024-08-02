@@ -9,35 +9,35 @@ body, .portfolio, .portfolio-box, .portfolio-txt, .portfolio-box img, .portfolio
 }
 
 body {
-    text-shadow: 0 0 8px white;
     flex-direction: column;
     margin: 0;
     padding: 0;
     font-family: 'Minecraft', sans-serif;
     align-items: center;
     height: 100vh;
-    background-color: #121212;
-    color: white;
+    background-color: white;
+    color: black;
     margin: 0;
     transition: background-color 0.75s;
     overflow-x: hidden;
 }
 
-body.day-mode {
-    background-color: #f0f0f0;
-    color: black;
+body.night-mode {
+    background-color: black;
+    color: white;
     text-shadow: none;
     .top{
-        background-image: url(img/day.jpg);
+        background-image: url(img/night.jpg);
     }
-    .portfolio-txt{
+    .portfolio-txt, .navbar ,.switch-txt {
+        text-shadow: 0 0 8px white;
         color: inherit;
     }
-    .portfolio-img{
-        box-shadow: 0 0 8px black;
+    .portfolio-box{
+        box-shadow: 0 0 8px white;
     }
     .top-face {
-        box-shadow: 0 0 8px black;
+        box-shadow: 0 0 8px white;
     }
 }
 
@@ -49,7 +49,7 @@ body.day-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 2;
 }
 
 .navbar-title {
@@ -103,7 +103,7 @@ body.day-mode {
     position: absolute;
     height: 50%;
     width: 100%;
-    background-image: url(img/night.jpg);
+    background-image: url(img/day.jpg);
     background-attachment: fixed;
     background-size: 100%;
     background-position-x: 0%;
@@ -122,7 +122,7 @@ body.day-mode {
     height: 200px;
     transition: 0.3s;
     z-index:1;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 8px black;
     transition: 0.3s;
 }
 
@@ -149,7 +149,7 @@ body.day-mode {
     height: 36%;
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 0 8px white;
+    box-shadow: 0 0 8px black;
     img,iframe{
         width: 100%;
         height: 100%;
@@ -169,7 +169,7 @@ body.day-mode {
     font-weight: lighter;
     position: absolute;
     left: 40%;
-    color: white;
+    color: inherit;
     transition: 0.3s;
     h5{
         color: inherit;
@@ -218,7 +218,7 @@ body.day-mode {
     height: 50px;
     border-radius: 50px;
     overflow: hidden;
-    background: linear-gradient(to right, #bbdefb 0%, #0d47a1 50%, #1a237e 100%);
+    background: linear-gradient(to right, #bbdefb 0%, #ffd54f 50%, #ffeb3b 100%);
     transition: 0.3s;
 }
 
@@ -232,20 +232,13 @@ body.day-mode {
 }
 
 .switch-bar.active {
-    background: linear-gradient(to right, #bbdefb 0%, #ffd54f 50%, #ffeb3b 100%);
-}
-
-.switch-bar.active .day-gradient {
-    opacity: 1;
-}
-
-.switch-bar.active .night-gradient {
-    opacity: 0;
+    background: linear-gradient(to right, #bbdefb 0%, #0d47a1 50%, #1a237e 100%);
 }
 
 .cloud {
     position: absolute;
-    width: 50px;
+    align-items: center;
+    width: 60px;
     height: 40px;
     background: #e1f5fe;
     border-radius: 20px 20px 0 0;
@@ -254,51 +247,51 @@ body.day-mode {
 
 .cloud1 {
     top: 40px;
-    left: 40px;
+    left: 90px;
 }
 
 .cloud2 {
     top: 30px;
-    left: 15px;
+    left: 115px;
 }
 
 .cloud3 {
     top: 25px;
-    left: -10px;
+    left: 140px;
 }
 
 .switch-bar.active .cloud1 {
-    left: 90px;
+    left: 40px;
 }
 
 .switch-bar.active .cloud2 {
-    left: 115px;
+    left: 15px;
 }
 
 .switch-bar.active .cloud3 {
-    left: 140px;
+    left: -10px;
 }
 
 .toggle {
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 75%;
     transform: translate(-50%, -50%);
     width: 30px;
     height: 30px;
-    background: #bbdefb;
+    background: #ffeb3b;
     border-radius: 50%;
     transition: left 0.3s, background 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 8px #2e73ab;
+    box-shadow: 0 0 8px white;
 }
 
 .switch-bar.active .toggle {
-    left: 75%;
-    background: #ffeb3b;
-    box-shadow: 0 0 8px white;
+    left: 25%;
+    background: #bbdefb;
+    box-shadow: 0 0 8px #2e73ab;
 }
 
 .moon, .sun {
@@ -309,26 +302,16 @@ body.day-mode {
 }
 
 .moon {
+    display: none;
     background: #bbdefb;
 }
 
-.sun {
-    background: #ffeb3b;
-    display: none;
-}
-
-.sun-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .switch-bar.active .sun {
-    display: block;
+    display: none;
 }
 
 .switch-bar.active .moon {
-    display: none;
+    display: block;
 }
 
 .crater {
@@ -444,3 +427,15 @@ body.day-mode {
     }
 }
 
+#follow-circle {
+    position: fixed;
+    z-index: 100;
+    opacity: 20%;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease, width 0.1s ease, height 0.1s ease;
+    will-change: transform;
+}
