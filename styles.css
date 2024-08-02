@@ -47,43 +47,42 @@ body.night-mode {
 
 .navbar {
     position: fixed;
-    top: -20%;
+    top: 0;
     width: 100%;
     left: 0%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    transition: 0.3s;
 }
 
 .navbar-title {
-    opacity: 0;
     padding: 10px;
     font-size: 24px;
     font-weight: bold;
     color: inherit;
-    transition: 0.3s;
     a {
         color: inherit;
         text-decoration: none;
     }
 }
+
+
+
 .navbar-title:hover {
     color: #ffd54f;
     font-size: 28px;
     padding: 6px;
+    transition: 0.3s;
     a{
         cursor: url('img/cursor2.png'), auto;
     }
 }
 
 .navbar-links {
-    opacity: 0;
     margin: 0;
     list-style: none;
     display: flex;
-    transition: 0.3s;
 }
 
 .navbar-links li {
@@ -108,9 +107,9 @@ body.night-mode {
 }
 
 .top {
-    transition: 0.3s ease-out;
+    transition: 0.3s;
     position: absolute;
-    height: 100%;
+    height: 50%;
     width: 100%;
     background-image: url(img/day.jpg);
     background-attachment: fixed;
@@ -127,12 +126,12 @@ body.night-mode {
     right: -30%;
     border-radius: 50%;
     transform: translateY(50%);
-    width: 0px;
-    height: 0px;
+    width: 200px;
+    height: 200px;
     transition: 0.3s;
     z-index:1;
     box-shadow: 0 0 8px black;
-    transition: 0.1s ease;
+    transition: 0.3s;
 }
 
 .top-face:hover {

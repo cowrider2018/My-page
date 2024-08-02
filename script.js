@@ -1,3 +1,4 @@
+/**
 window.addEventListener('load', function() {
     var move = document.querySelector('.top');
     move.style.height = '50%';
@@ -13,7 +14,7 @@ window.addEventListener('load', function() {
     move = document.querySelector('.navbar-links');
     move.style.opacity = '1';
 });
-
+**/
 
 document.getElementById('switch-bar').addEventListener('click', function() {
     this.classList.toggle('active');
