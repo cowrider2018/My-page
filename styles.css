@@ -383,6 +383,9 @@ body.night-mode {
         width: 192px;
         height: 192px;
     }
+    .book-page {
+        left: 30%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -396,6 +399,9 @@ body.night-mode {
     .top-face:hover {
         width: 144px;
         height: 144px;
+    }
+    .book-page {
+        left: 20%;
     }
 }
 
@@ -422,6 +428,9 @@ body.night-mode {
 
     .navbar-links a {
         font-size: 14px;
+    }
+    .book-page {
+        left: 10%;
     }
 }
 
