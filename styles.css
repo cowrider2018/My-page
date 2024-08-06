@@ -46,7 +46,7 @@ body.night-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 100;
 }
 
 .navbar-title {
@@ -120,7 +120,7 @@ body.night-mode {
     width: 200px;
     height: 200px;
     transition: 0.3s;
-    z-index:1;
+    z-index:99;
     box-shadow: 0 0 8px black;
     transition: 0.3s;
 }
@@ -191,7 +191,7 @@ body.night-mode {
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 100;
+        z-index: 99;
         transform-origin: left center;
         transition: transform 1s ease-in-out;
     }
@@ -203,13 +203,13 @@ body.night-mode {
     }
     .overlay-dynamic-left {
         transform: rotateY(-180deg);
-        z-index: 10000;
+        z-index: 99;
         transform-origin: left center;
         transition: transform 1s ease-in-out;
     }
     .overlay-dynamic-right {
         transform: rotateY(0deg);
-        z-index: 10000;
+        z-index: 99;
         transform-origin: left center;
         transition: transform 1s ease-in-out;
     }
