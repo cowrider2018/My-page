@@ -33,13 +33,6 @@ body.night-mode {
     .top{
         background-image: url(img/night.jpg);
     }
-    .portfolio-txt, .navbar ,.switch-txt {
-        text-shadow: 0 0 8px white;
-        color: inherit;
-    }
-    .portfolio-box{
-        box-shadow: 0 0 8px white;
-    }
     .top-face {
         box-shadow: 0 0 8px white;
     }
@@ -66,8 +59,6 @@ body.night-mode {
         text-decoration: none;
     }
 }
-
-
 
 .navbar-title:hover {
     color: #ffd54f;
@@ -139,78 +130,81 @@ body.night-mode {
     width: 240px;
     height: 240px;
 }
-
-.portfolio{
-    top: 50%;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    left: 0%;
-    transition: 0s;
+.book-page {
+    perspective: 1000px;
     position: absolute;
-}
-
-.portfolio-box, .portfolio-box-default{
-    margin-left: 4%;
-    margin-top: 30px;
-    border-radius: 15px;
-    width: 32%;
-    height: 36%;
-    position: absolute;
-    overflow: hidden;
-    box-shadow: 0 0 8px black;
-    img,iframe{
+    top: 60%;
+    left: 40%;
+    width: 300px;
+    height: 400px;
+    .content {
+        background-color: white;
         width: 100%;
         height: 100%;
+        position: absolute;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
     }
-    transition: 0.6s;
-}
-
-.portfolio-box{
-    left: -100%;
-}
-
-.portfolio-box-default{
-    left: 0%;
-}
-
-.portfolio-txt {
-    font-weight: lighter;
-    position: absolute;
-    left: 40%;
-    color: inherit;
-    transition: 0.3s;
-    h5{
-        color: inherit;
-        width: fit-content;
-        font-weight: lighter;
-        margin-bottom: 30px;
-        font-size: 30px;
-        transition: 0.3s;
+    .content-shadow {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
     }
-    h5:hover{
-        font-size: 36px;
-        cursor: url('img/cursor2.png'), auto;
-        color: #ffd54f;
+    
+    .content-front{
+        background-color: white;
     }
-    .txt{
-        color: inherit;
-        text-decoration: none;
-        width: fit-content;
-        position: relative;
-        padding: 5px;
-        font-size: 20px;
+    .content-back{
+        background-color: white;
     }
-    .txt:hover{
-        text-decoration: none;
-        font-size: 24px;
-        cursor: url('img/cursor2.png'), auto;
-        color: #ffd54f;
-        transition: 0.3s;
+    .content-box{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
-    a{
-        color: inherit;
-        text-decoration: none;
+    .content-txt{
+        position: absolute;
+        top: 40%;
+        width: 80%;
+        height: 45%;
+    }
+    .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
+    }
+    .overlay-left {
+        transform: rotateY(-180deg);
+    }
+    .overlay-right {
+        transform: rotateY(0);
+    }
+    .overlay-dynamic-left {
+        transform: rotateY(-180deg);
+        z-index: 10000;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
+    }
+    .overlay-dynamic-right {
+        transform: rotateY(0deg);
+        z-index: 10000;
+        transform-origin: left center;
+        transition: transform 1s ease-in-out;
     }
 }
 
@@ -382,16 +376,6 @@ body.night-mode {
         width: 192px;
         height: 192px;
     }
-
-    .portfolio-box, .portfolio-box-default {
-        width: 40%;
-        height: 200px;
-    }
-
-    .portfolio-txt{
-        font-size: 15px;
-        left: 50%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -406,20 +390,6 @@ body.night-mode {
         width: 144px;
         height: 144px;
     }
-
-    .portfolio{
-        top: 40%;
-    }
-
-    .portfolio-box, .portfolio-box-default {
-        width: 50%;
-        height: 200px;
-    }
-
-    .portfolio-txt{
-        font-size: 15px;
-        left: 65%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -429,16 +399,6 @@ body.night-mode {
 
     .top-face {
         left: 0%;
-    }
-
-    .portfolio-box, .portfolio-box-default{
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    .portfolio-txt {
-        top: 30%;
-        left: 10%;
     }
 
     .navbar-title {
