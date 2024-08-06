@@ -132,7 +132,7 @@ body.night-mode {
 }
 .book-page {
     perspective: 1000px;
-    position: absolute;
+    position: relative;
     top: 60%;
     left: 40%;
     width: 300px;
